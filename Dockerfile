@@ -1,4 +1,4 @@
-FROM node:lts
+FROM node:8.15.1@sha256:918f0be3932f555cd2645ca828b9c231a2dab10d9cf2dbb58896411207bbe52f
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
@@ -7,7 +7,7 @@ ENV NODE_ENV $NODE_ENV
 
 COPY NodeBB/install/package.json /usr/src/app/package.json
 COPY NodeBB/ /usr/src/app
-RUN npm install --only=prod && \
+RUN npm install && \
     npm cache clean --force
 
 
