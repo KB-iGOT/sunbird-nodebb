@@ -49,3 +49,4 @@ final Jira Task ID test
 ### test PR
 ### New PR after pipeline change
 ### test with a new PR
+### removed checkout from central pipeline
